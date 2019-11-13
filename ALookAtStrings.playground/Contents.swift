@@ -14,6 +14,7 @@ let example = "The quick brown fox jumped over the lazy dog."
 
 // Iterate over each character in the string
 for singleCharacter in example {
+    singleCharacter
     // The output will show below in the Debug area
     print(singleCharacter)
 }
