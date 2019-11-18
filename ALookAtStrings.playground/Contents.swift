@@ -177,6 +177,11 @@ Say that you wish to encrypt the word `pen` using a *rightward shift of three ch
 */
 
 // Create the starting phrase
-let plainText = "pen"
+let plainText = "CAB"
 
 // Encrypt the starting phrase
+for scalar in plainText.unicodeScalars {
+    print("The unicode scalar is: \(scalar)")
+    print("The unicode scalar value is: \(scalar.value)")
+
+}
