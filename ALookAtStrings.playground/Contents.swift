@@ -163,6 +163,13 @@ let aQuestion = "请问现在几点了?"
 
 // Write code to complete the exercise below...
 
+print("在")
+
+var newIndex = aQuestion.index(aQuestion.startIndex, offsetBy: 0)
+index = aQuestion.index(aQuestion.endIndex, offsetBy: -5)
+let fourthLastCharacter = aQuestion[index]
+
+print(fourthLastCharacter)
 /*:
 ### Exercise 3
 
