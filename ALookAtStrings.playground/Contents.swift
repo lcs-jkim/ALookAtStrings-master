@@ -143,7 +143,9 @@ print("Second last character is: \(secondLast)")
 // This will separate the output from the examples above from your work
 print("===== Exercise 1 begins =====")
 
-
+for character in "Jenis Kim this is due in one hour oh my God" {
+    print(character)
+}
 
 /*:
 ### Exercise 2
@@ -179,9 +181,24 @@ Say that you wish to encrypt the word `pen` using a *rightward shift of three ch
 // Create the starting phrase
 let plainText = "CAB"
 
+// Create the variable to store the code
+var cipherText = ""
+
 // Encrypt the starting phrase
 for scalar in plainText.unicodeScalars {
-    print("The unicode scalar is: \(scalar)")
-    print("The unicode scalar value is: \(scalar.value)")
+    print(scalar)
+    print(scalar.value)
+
+    // Shift each scalar value by 3
+    let newScalarValue = scalar.value + 3
+    
+    // Attempt to convert the scalar value to an actual scalar (character)
+    if let newScalar = UnicodeScalar(newScalarValue) {
+        print(newScalarValue)
+        print(newScalar)
+        cipherText += String(newScalar)
+        
+    }
 
 }
+
